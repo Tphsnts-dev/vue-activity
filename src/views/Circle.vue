@@ -1,0 +1,38 @@
+<template>
+    <v-text-field v-model="radius_value" label="Please Input Radius"/>
+    <h1>Answer :{{result}}</h1>
+    <br/>
+    <v-btn class="center" outlined color="green" @click = "calculate">Calculate</v-btn>
+  
+
+</template>
+
+
+<style scoped>
+.center{
+margin-left: auto;
+margin-right: auto;
+display: flex;
+}
+h1{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 2em;
+display: flex;
+align-items: center;
+justify-content: center 
+}
+</style>
+
+<script>
+import { ref } from 'vue'
+export default {
+setup() {
+  const result = ref(0)
+  const radius_value = ref(0)
+  const calculate = () => {
+    result.value = (radius_value.value *radius_value.value) * Math.PI
+  }
+  return{radius_value,result,calculate}
+},
+}
+</script>

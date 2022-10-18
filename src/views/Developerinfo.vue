@@ -1,11 +1,5 @@
 <template>
-    <div class="media">
-      <img class="mr-3" src="../assets/self-icon.png" alt="Generic placeholder image" 
-     style="display: flex;
-     margin-left: 40%;
-     margin-right: 50%;
-     width:250px ;
-     height:250px">
+    <img class="mr-3" src="../assets/self-icon.png" alt="Generic placeholder image">
       <div class="media-body">
       <h1 class="display-4" style="margin-left:40%;">Tyrhone Paul Santos</h1>
       <br/>
@@ -20,40 +14,52 @@
      Familiarity in Using Java, Python, Kotlin, SQL and Firebase
     </p>
     <br/>
-    <div id="app">
-       <v-carousel :show-arrows="true">
-         <v-carousel-item
-           v-for="(item,i) in items"
-           :key="i"
-           :src="item.src"
-         ></v-carousel-item>
-       </v-carousel>
-   </div>
-   
-      
-      </div>
-     </div>
+    </div>
+  <v-carousel>
+    <v-carousel-item style="width "
+      v-for="img_data in items"
+      :key="img_data.key"
+      :src="img_data.src"
+    >
+    </v-carousel-item>
+  </v-carousel>
      </template>
    
      <script>
+     
      export default{
+        
      data () {
        return {
          items: [
            {
-             src:"src/assets/img1.png"
+             key : 1,
+             src:'src/assets/img1.png'
            },
            {
-             src:"src/assets/img2.png"
+             key : 2,
+             src:'src/assets/img2.png'
            },
            {
-             src:"src/assets/img3.png"
+            key : 3,
+             src:'src/assets/img3.png'
            },
            {
-             src:"src/assets/img4.png"
+            key : 4,
+             src:'src/assets/img4.png'
            },
          ]
        }
      }
    }
    </script>
+
+   <style scoped>
+   .mr-3{
+     display: flex;
+     margin-left: 45%;
+     margin-right: 50%;
+     width:250px;
+     height:250px;
+   }
+   </style>

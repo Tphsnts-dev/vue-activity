@@ -2,7 +2,7 @@
     <v-text-field v-model="side_value" label="Please Input Sides"/>
     <h1>Answer :{{result}}</h1>
     <br/>
-    <v-btn class="center" outlined color="green" @click = "calculate">Calculate</v-btn>
+    <v-btn class="center" outlined color="white" @click = "calculate">Calculate</v-btn>
   
 
 </template>

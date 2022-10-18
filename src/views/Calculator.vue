@@ -8,11 +8,11 @@
    <v-text-field  readonly>{{total}}</v-text-field>
    <br/>
            <v-row no-gutters> 
-           <v-col><v-btn depressed color="green" @click="addition" >Addition</v-btn></v-col>
-           <v-col><v-btn depressed color="green" @click="subtraction">Subtraction</v-btn></v-col>
-           <v-col><v-btn depressed color="green" @click="multiplication">Multiplication</v-btn></v-col>
-           <v-col><v-btn depressed color="green" @click="division">Division</v-btn></v-col>
-           <v-col><v-btn depressed color="green" @click="average">Average</v-btn></v-col>
+           <v-col><v-btn depressed color="white" @click="addition" >Addition</v-btn></v-col>
+           <v-col><v-btn depressed color="white" @click="subtraction">Subtraction</v-btn></v-col>
+           <v-col><v-btn depressed color="white" @click="multiplication">Multiplication</v-btn></v-col>
+           <v-col><v-btn depressed color="white" @click="division">Division</v-btn></v-col>
+           <v-col><v-btn depressed color="white" @click="average">Average</v-btn></v-col>
            </v-row>
 </template>
 <script>

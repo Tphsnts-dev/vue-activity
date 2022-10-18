@@ -7,10 +7,10 @@
    <v-text-field  readonly>{{output}}</v-text-field>
    <br/>
    <v-row no-gutters > 
-       <v-col><v-btn depressed color="green" @click="countVowels">Count Vowels</v-btn></v-col>
-       <v-col> <v-btn depressed color="green" @click="countNumbers">Count Numbers</v-btn></v-col>
-       <v-col><v-btn depressed color="green" @click="countConsonants">Count Consonants</v-btn></v-col>
-       <v-col><v-btn depressed color="green" @click="replaceVowels">Replace Vowels</v-btn></v-col>
+       <v-col><v-btn depressed color="white" @click="countVowels">Count Vowels</v-btn></v-col>
+       <v-col> <v-btn depressed color="white" @click="countNumbers">Count Numbers</v-btn></v-col>
+       <v-col><v-btn depressed color="white" @click="countConsonants">Count Consonants</v-btn></v-col>
+       <v-col><v-btn depressed color="white" @click="replaceVowels">Replace Vowels</v-btn></v-col>
        </v-row>
 </template>
 

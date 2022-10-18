@@ -1,36 +1,42 @@
 <template>
   <v-app>
       <v-main>
- <v-app-bar color = "green" flat app>
+ <v-app-bar color = "white" flat app>
     <v-app-bar-nav-icon @click="drawer =! drawer"> </v-app-bar-nav-icon>
-    <v-toolbar-title>Welcome User</v-toolbar-title>
+    <v-toolbar-title><h3 class="white">&nbsp;&nbsp;Welcome User</h3></v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn flat to="/stringmanip">String Manipulation</v-btn>
-      <v-btn flat to="/axios">Weather</v-btn>
       <v-menu
-    open-on-hover
+      transition="slide-x-transition"
+      bottom
+      right
+      
   >
     <template v-slot:activator="{ props }">
       <v-btn
         v-bind="props"
+        class="white"
       >
-      <v-icon>mdi-chevron-down</v-icon>
         Math Menu
       </v-btn>
     </template>
 
-    <v-list>
+    <v-list class="white">
       <v-list-item
         v-for="item in array_area"
         :key="item.key"
         :to="item.path"
       >
-      
+      <v-list-item-action>
         <v-list-item-title>{{ item.name }}</v-list-item-title>
+      </v-list-item-action>
       </v-list-item>
     </v-list>
+    
   </v-menu>
+      <v-btn to="/stringmanip" class="white">String Manipulation</v-btn>
+      <v-btn to="/axios" class="white">Weather</v-btn>
+      
 
           
     </v-toolbar-items>
@@ -42,8 +48,7 @@
      <v-list>
      <v-list-item v-for="link in link_array" :key="link.text" :to = "link.path">
         <v-list-item-action>
-            <v-icon left> {{ link.icon }}</v-icon>
-            <v-list-item-title>  &nbsp; {{link.text }}</v-list-item-title>
+            <v-list-item-title> <v-icon> {{ link.icon }}</v-icon> &nbsp; {{link.text }}</v-list-item-title>
         </v-list-item-action> 
     </v-list-item>     
     </v-list>
@@ -78,3 +83,11 @@ data: () => ({
 };
 </script>
 
+<style>
+.white{
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  outline: none;
+}
+</style>

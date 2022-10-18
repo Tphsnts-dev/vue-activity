@@ -1,6 +1,6 @@
 <template>
     <div class="media">
-      <img class="mr-3" src="src/assets/self-icon.png" alt="Generic placeholder image" 
+      <img class="mr-3" src="../assets/self-icon.png" alt="Generic placeholder image" 
      style="display: flex;
      margin-left: 40%;
      margin-right: 50%;

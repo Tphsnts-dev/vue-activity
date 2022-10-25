@@ -16,7 +16,7 @@
     <br/>
     </div>
   <v-carousel>
-    <v-carousel-item style="width "
+    <v-carousel-item 
       v-for="img_data in items"
       :key="img_data.key"
       :src="img_data.src"
@@ -32,21 +32,22 @@
      data () {
        return {
          items: [
+           
            {
              key : 1,
-             src:'src/assets/img1.png'
+             src:"/images/img1.png"
            },
            {
-             key : 2,
-             src:'src/assets/img2.png'
+            key : 2,
+             src:"/images/img2.png"
            },
            {
             key : 3,
-             src:'src/assets/img3.png'
+             src:"/images/img3.png"
            },
            {
             key : 4,
-             src:'src/assets/img4.png'
+             src:"/images/img4.png"
            },
          ]
        }

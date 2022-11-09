@@ -11,16 +11,11 @@ import Axios from '../components/Axios.vue'
 import Playquiz from '../components/Playquiz.vue'
 import StartQuiz from '../components/StartQuiz.vue'
 import Leaderboards from '../components/Leaderboards.vue'
-import tryComponent from '../components/tryComponent.vue'
 
 
 const routes = [
   
-  {
-    path: '/tryComponent',
-    name: 'tryComponent',
-    component: tryComponent
-  },
+  
   {
     path: '/axios',
     name: 'axios',

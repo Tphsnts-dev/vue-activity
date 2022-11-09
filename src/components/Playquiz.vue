@@ -110,7 +110,7 @@ setup() {
       valueDeterminate.value = 0
       interval.value = 0
       queryAndIndeterminate()
-      
+      clearInterval(time_count_interval.value)
     }
 
     

@@ -58,7 +58,6 @@ setup(){
         const querySnapshot = await getDocs(collection(db, "scores_data"))
         let data_fetch = []
         querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data())
         const data_table = {
             id : doc.id,
             name : doc.data().Name,

@@ -84,14 +84,11 @@
          url: 'https://api.openweathermap.org/data/2.5/weather?lat=14.599512&lon=120.984222&appid=11e59fa39f0216db323e36ba2e04c90e',
  };
  axios.request(options).then(function (response) {
-    
      data_fromAPI.value = response.data.main.humidity
      data_fromAPI1.value = parseInt(response.data.main.temp)/10
      data_fromAPI2.value = response.data.sys.country
-     
      data_fromAPI4.value = response.data.weather[0].description
      data_fromAPI5.value = response.data.main.pressure
-     console.log(response.data)
  
  
      

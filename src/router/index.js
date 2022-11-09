@@ -9,15 +9,25 @@ import Square from '../components/Square.vue'
 import Triangle from '../components/Triangle.vue'
 import Axios from '../components/Axios.vue'
 import Playquiz from '../components/Playquiz.vue'
+import StartQuiz from '../components/StartQuiz.vue'
+import Leaderboards from '../components/Leaderboards.vue'
+import tryComponent from '../components/tryComponent.vue'
+
 
 const routes = [
+  
+  {
+    path: '/tryComponent',
+    name: 'tryComponent',
+    component: tryComponent
+  },
   {
     path: '/axios',
     name: 'axios',
     component: Axios
   },
   {
-    path: '/playquiz',
+    path: '/playquiz/:username',
     name: 'playquiz',
     component: Playquiz
   },
@@ -54,10 +64,21 @@ const routes = [
     path : '/triangle',
     name : 'Triangle',
     component :Triangle,
-  },{
+  },
+  {
     path : '/circle',
     name : 'Circle',
     component :Circle,
+  },
+  {
+    path : '/startquiz',
+    name : 'StartQuiz',
+    component :StartQuiz,
+  },
+  {
+    path : '/leaderboards',
+    name : 'Leaderboards',
+    component :Leaderboards,
   },
  
 ]

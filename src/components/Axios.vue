@@ -18,11 +18,11 @@
                  {{data_fromAPI1}}°
              </div>
              <div class="icons">
-                 <i class="fas fa-wind"></i><br/><i class="fas fa-tint"></i>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-wind"></i>&nbsp;&nbsp;{{data_fromAPI}}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-tint"></i>&nbsp;&nbsp;{{data_fromAPI5}}
              </div>
              <div>
                  <div class="info">
-                     {{data_fromAPI}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data_fromAPI4}} <br> {{data_fromAPI5}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data_fromAPI2}},&nbsp;{{data_fromAPI3}}
+                  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data_fromAPI4}} <br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data_fromAPI2}}
                  </div>
                  
              </div>
@@ -81,16 +81,17 @@
          const data_fromAPI5 = ref(null)
          const options = {
          method: 'GET',
-         url: 'http://api.weatherapi.com/v1/forecast.json?key=e9413e4a70304d06b4b04904221810&q=Philippines&days=1&aqi=no&alerts=no',
+         url: 'https://api.openweathermap.org/data/2.5/weather?lat=14.599512&lon=120.984222&appid=11e59fa39f0216db323e36ba2e04c90e',
  };
  axios.request(options).then(function (response) {
-     console.log(response.data);
-     data_fromAPI.value = response.data.current.condition.text
-     data_fromAPI1.value = response.data.current.temp_c
-     data_fromAPI2.value = response.data.location.name
-     data_fromAPI3.value = response.data.location.country
-     data_fromAPI4.value = response.data.current.last_updated
-     data_fromAPI5.value = response.data.current.wind_kph
+    
+     data_fromAPI.value = response.data.main.humidity
+     data_fromAPI1.value = parseInt(response.data.main.temp)/10
+     data_fromAPI2.value = response.data.sys.country
+     
+     data_fromAPI4.value = response.data.weather[0].description
+     data_fromAPI5.value = response.data.main.pressure
+     console.log(response.data)
  
  
      
@@ -98,7 +99,7 @@
  }).catch(function (error) {
      console.error(error);
  });
-   return {data_fromAPI,data_fromAPI1,data_fromAPI2,data_fromAPI3,data_fromAPI4,data_fromAPI5}
+   return {data_fromAPI,data_fromAPI1,data_fromAPI2,data_fromAPI4,data_fromAPI5}
  }
  
     

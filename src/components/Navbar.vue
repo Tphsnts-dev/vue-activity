@@ -36,7 +36,7 @@
   </v-menu>
       <v-btn to="/stringmanip" class="white">String Manipulation</v-btn>
       <v-btn to="/axios" class="white">Weather</v-btn>
-      <v-btn to="/playquiz" class="white">Play Quiz</v-btn>
+      <v-btn to="/startquiz" class="white">Play Quiz</v-btn>
       
 
           
